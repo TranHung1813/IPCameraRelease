@@ -58,7 +58,7 @@ namespace IPCameraManager
 
         private async void CheckForUpdates()
         {
-            UpdateManager manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/TranHung1813/IPCamera-Control");
+            UpdateManager manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/TranHung1813/IPCameraRelease");
             var updateInfo = await manager.CheckForUpdate();
             if (updateInfo.ReleasesToApply.Count > 0)
             {

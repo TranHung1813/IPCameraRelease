@@ -35,7 +35,7 @@ namespace IPCameraManager
             this.btMaximize = new Guna.UI2.WinForms.Guna2Button();
             this.btMinimize = new Guna.UI2.WinForms.Guna2Button();
             this.btExit = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbAppName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -66,7 +66,7 @@ namespace IPCameraManager
             this.panel1.Controls.Add(this.btMaximize);
             this.panel1.Controls.Add(this.btMinimize);
             this.panel1.Controls.Add(this.btExit);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbAppName);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -126,16 +126,16 @@ namespace IPCameraManager
             this.btExit.Text = "X";
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // label1
+            // lbAppName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(48, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Phần mềm quản lý Camera";
+            this.lbAppName.AutoSize = true;
+            this.lbAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAppName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbAppName.Location = new System.Drawing.Point(48, 9);
+            this.lbAppName.Name = "lbAppName";
+            this.lbAppName.Size = new System.Drawing.Size(210, 18);
+            this.lbAppName.TabIndex = 1;
+            this.lbAppName.Text = "Phần mềm quản lý Camera";
             // 
             // pictureBox1
             // 
@@ -382,7 +382,7 @@ namespace IPCameraManager
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button tabPage_KhamBenh;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbAppName;
         private Guna.UI2.WinForms.Guna2Button tabPage_InPhieu;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Button btMinimize;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace IPCameraManager
             InitializeComponent();
             InitForm_Default();
             CheckForUpdates();
+            AddVersionNumber();
         }
         //1. Luu thong tin dang nhap (Done)
         //2. Tao form loading cho Camera (Done)
@@ -42,7 +44,7 @@ namespace IPCameraManager
         //26. Them tinh nang PZT, chinh sua Do sang, contrast, ... vao menu Setting
         //27. Kiem tra ket noi Camera tu dong (done)
         //28. Popup canh bao Message khi mat ket noi
-        //29. Day Form Setup PTZ xuong MainForm
+        //29. Day Form Setup PTZ xuong MainForm (done)
         private const int ERR_OK = 0;
         private const int ERR_NOT_OK = 1;
 
@@ -58,20 +60,29 @@ namespace IPCameraManager
 
         private async void CheckForUpdates()
         {
-            UpdateManager manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/TranHung1813/IPCameraRelease");
-            var updateInfo = await manager.CheckForUpdate();
-            if (updateInfo.ReleasesToApply.Count > 0)
+            using (var manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/TranHung1813/IPCameraRelease"))
             {
-                if(MessageBox.Show($"New version available ({updateInfo.ReleasesToApply[0].Version}). Update?", "Update?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                var updateInfo = await manager.CheckForUpdate();
+                if (updateInfo.ReleasesToApply.Count > 0)
                 {
-                    await manager.UpdateApp();
-                    MessageBox.Show("Update complete, please restart application.");
+                    if (MessageBox.Show($"New version available ({updateInfo.ReleasesToApply[0].Version}). Update?", "Update?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        await manager.UpdateApp();
+                        MessageBox.Show("Cập nhật phần mềm thành công. Hãy khởi động lại phần mềm để bắt đầu.");
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("No update.");
                 }
             }
-            else
-            {
-                MessageBox.Show("No update.");
-            }
+        }
+        private void AddVersionNumber()
+        {
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+
+            lbAppName.Text += $" v.{versionInfo.FileVersion}";
         }
         private void InitForm_Default()
         {

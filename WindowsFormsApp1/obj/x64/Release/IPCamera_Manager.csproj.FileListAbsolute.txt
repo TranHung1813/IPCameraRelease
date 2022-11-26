@@ -153,7 +153,6 @@ E:\Projects\IPCameraRelease\WindowsFormsApp1\bin\x64\Release\System.Memory.xml
 E:\Projects\IPCameraRelease\WindowsFormsApp1\bin\x64\Release\System.Numerics.Vectors.xml
 E:\Projects\IPCameraRelease\WindowsFormsApp1\bin\x64\Release\System.Resources.Extensions.xml
 E:\Projects\IPCameraRelease\WindowsFormsApp1\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
-E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCamera_Manager.csproj.AssemblyReference.cache
 E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCamera_Manager.csproj.ResolveComReference.cache
 E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCameraManager.FormSetupPTZ.resources
 E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCameraManager.UserControls.PageSearchPatient.resources
@@ -169,3 +168,4 @@ E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCamera_Manager.cs
 E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCamera_Manager.csproj.CopyComplete
 E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCameraManager.exe
 E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCameraManager.pdb
+E:\Projects\IPCameraRelease\WindowsFormsApp1\obj\x64\Release\IPCamera_Manager.csproj.AssemblyReference.cache
